@@ -1,0 +1,47 @@
+package input;
+import java.util.Scanner;
+
+public class practise4 {
+	public static void main(String[]args) {
+		Scanner scn =new Scanner(System.in);
+		
+		System.out.println("Enter the user name");
+		String userName = scn.nextLine();
+		System.out.println("Enetr the unique comsum");
+		double unique_consume= scn.nextDouble();
+		
+		int count=0;
+		double monthlyBill;
+		double total=0;
+		double avg=0;
+		double discount;
+		double billvalue;
+		
+		for(count=0;count<10;count++) {
+			System.out.println("Enter the monthly bill");
+			monthlyBill =scn.nextDouble();
+			
+			total=total+monthlyBill;
+		}
+		
+		avg=total/10;
+		
+		if(avg>=10000) {
+			discount=0.02;
+		}else if(avg>=2000) {
+			discount=0.08;
+		}else if(avg>500) {
+			discount=0.12;
+		}else {
+			discount=0.25;
+		}
+		billvalue=unique_consume*90-unique_consume*90*discount;
+		
+		System.out.println("Bill Value: "+billvalue);
+		
+		
+		
+	}
+	
+
+}
